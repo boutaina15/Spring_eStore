@@ -37,17 +37,17 @@ public class ProductServiceImpl {
         Product product = productRepository.findById(productId).orElseThrow(() -> new IllegalStateException("product does not exists"));
         if (product != null){
             product.setBrand(productreq.getBrand());
-            product.setCategory(productreq.getCategory());
+
             product.setUpdatedAt(productreq.getUpdatedAt());
             product.setColor(productreq.getBrand());
-            product.setConfiguration(productreq.getConfiguration());
+
             product.setCreatedAt(productreq.getCreatedAt());
             product.setDescription(productreq.getDescription());
-            product.setDiscount(productreq.getDiscount());
+
             product.setDiscountEnd(productreq.getDiscountEnd());
             product.setDiscountPercentage(productreq.getDiscountPercentage());
             product.setDiscountStart(productreq.getDiscountStart());
-            product.setGallery(productreq.getGallery());
+
             product.setPicture(productreq.getPicture());
             product.setPrice(productreq.getPrice());
             product.setQuantity(productreq.getQuantity());

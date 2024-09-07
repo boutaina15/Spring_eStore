@@ -69,15 +69,7 @@ public class Product {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @OneToOne
-    @JoinColumn(name = "category_id", referencedColumnName = "id")
-    private Category category;
 
-    @OneToOne( mappedBy = "product", cascade = CascadeType.ALL)
-    private Gallery gallery;
-
-    @OneToOne(mappedBy = "product",cascade = CascadeType.ALL)
-    private Configuration configuration;
 
     @PrePersist
     protected void onCreate() {

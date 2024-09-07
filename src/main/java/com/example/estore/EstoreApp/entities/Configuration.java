@@ -20,10 +20,10 @@ public class Configuration {
     @Column(name= "id")
     private Long id;
 
-    @Column(name= "key")
+    @Column(name= "_key")
     private String key;
 
-    @Column(name= "value")
+    @Column(name= "_value")
     private String value;
 
     @Column(name= "created_at")

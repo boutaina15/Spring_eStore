@@ -24,7 +24,7 @@ public class Category {
     private String name;
 
     @Column(name= "picture")
-    private Byte picture;
+    private byte[] picture;
 
     @Column(name= "created_at")
     private LocalDate created_at;
