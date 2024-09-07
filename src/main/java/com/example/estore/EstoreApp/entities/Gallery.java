@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Set;
 
 
 @Entity
@@ -31,5 +33,18 @@ public class Gallery {
     private String type;
 
     @Column(name= "created_at")
-    private LocalDate created_at;
+    private LocalDateTime created_at;
+
+    @PrePersist
+    protected void onCreate() {
+        created_at = LocalDateTime.now();
+    }
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "product_id", referencedColumnName = "id")
+    private Product product;
+
+
+
+
 }

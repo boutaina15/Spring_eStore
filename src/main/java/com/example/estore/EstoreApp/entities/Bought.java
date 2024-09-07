@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Data
@@ -20,5 +22,20 @@ public class Bought {
     private Long id;
 
     @Column(name= "created_at")
-    private LocalDate created_at;
+    private LocalDateTime created_at;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
+
+
+    @ManyToMany(mappedBy = "boughts")
+    Set<Product> products;
+
+
+    @PrePersist
+    protected void onCreate() {
+        created_at = LocalDateTime.now();
+    }
+
 }
