@@ -39,6 +39,7 @@ public class ConfigurationServiceImpl {
             configuration.setCreated_at(configurationreq.getCreated_at());
             configuration.setKey(configurationreq.getKey());
             configuration.setValue(configurationreq.getValue());
+            configuration.setProduct(configurationreq.getProduct());
 
 
             System.out.println("the configuration  has been updated succefully");

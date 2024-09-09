@@ -107,4 +107,9 @@ public class Product {
             joinColumns = @JoinColumn(name = "product_id"),
             inverseJoinColumns = @JoinColumn(name = "cart_id"))
     Set<Cart> carts;
+
+
+    public Category getDiscount() {
+        return null;
+    }
 }

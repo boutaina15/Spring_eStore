@@ -37,7 +37,8 @@ public class BoughtServiceImpl {
         Bought bought = boughtRepository.findById(boughtId).orElseThrow(() -> new IllegalStateException("bought does not exists"));
         if (bought != null){
             bought.setCreated_at(boughtreq.getCreated_at());
-
+            bought.setUser(boughtreq.getUser());
+            bought.setProducts(boughtreq.getProducts());
             System.out.println("the bought  has been updated succefully");
 
         }

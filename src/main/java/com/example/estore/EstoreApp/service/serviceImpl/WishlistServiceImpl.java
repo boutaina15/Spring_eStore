@@ -38,6 +38,8 @@ public class WishlistServiceImpl {
         if (wishlist != null){
 
             wishlist.setCreated_at(wishlistreq.getCreated_at());
+            wishlist.setUser(wishlistreq.getUser());
+            wishlist.setProducts(wishlistreq.getProducts());
 
             System.out.println("the wishlist  has been updated succefully");
 

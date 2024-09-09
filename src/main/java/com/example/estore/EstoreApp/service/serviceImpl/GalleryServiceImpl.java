@@ -40,6 +40,7 @@ public class GalleryServiceImpl {
             gallery.setData(galleryreq.getData());
             gallery.setType(galleryreq.getType());
             gallery.setName(galleryreq.getName());
+            gallery.setProduct(galleryreq.getProduct());
 
             System.out.println("the gallery  has been updated succefully");
 

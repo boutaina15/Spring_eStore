@@ -40,7 +40,8 @@ public class CartServiceImpl {
         if (cart != null){
 
             cart.setCreated_at(cartreq.getCreated_at());
-
+            cart.setUser(cartreq.getUser());
+            cart.setProducts(cartreq.getProducts());
             System.out.println("the cart  has been updated succefully");
 
         }

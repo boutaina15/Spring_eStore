@@ -38,6 +38,7 @@ public class CommentServiceImpl {
         if (comment != null){
             comment.setCreated_at(commentreq.getCreated_at());
             comment.setDescription(commentreq.getDescription());
+            comment.setProduct(commentreq.getProduct());
 
             System.out.println("the comment  has been updated succefully");
 

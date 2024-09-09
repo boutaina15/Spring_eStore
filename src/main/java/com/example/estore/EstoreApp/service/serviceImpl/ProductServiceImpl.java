@@ -40,14 +40,14 @@ public class ProductServiceImpl {
 
             product.setUpdatedAt(productreq.getUpdatedAt());
             product.setColor(productreq.getBrand());
-
+            product.setCarts(productreq.getCarts());
             product.setCreatedAt(productreq.getCreatedAt());
             product.setDescription(productreq.getDescription());
-
+            product.setBoughts(productreq.getBoughts());
             product.setDiscountEnd(productreq.getDiscountEnd());
             product.setDiscountPercentage(productreq.getDiscountPercentage());
             product.setDiscountStart(productreq.getDiscountStart());
-
+            product.setCategory(productreq.getDiscount());
             product.setPicture(productreq.getPicture());
             product.setPrice(productreq.getPrice());
             product.setQuantity(productreq.getQuantity());
